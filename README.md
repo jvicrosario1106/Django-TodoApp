@@ -1,15 +1,15 @@
 # Django-TodoApp
 
 ## Run PipEnv
-```pipenv shell``
+```pipenv shell```
 
 ## Install requirements.txt
-```pip install -r requirements.txt
+```pip install -r requirements.txt```
 
-##Run PipEnv Install Django
+## Run PipEnv Install Django
 ```pipenv install django```
 
-##Migrate
+## Migrate
 ```pythono manage.py migrate```
 
 ## Run it! 
