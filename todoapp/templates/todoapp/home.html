@@ -1,0 +1,39 @@
+{% extends 'todoapp/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                {{form|crispy}}
+                <button type="submit" class='btn btn-success'>Create New</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    {% for todos in todo %}
+    <div class="card mt-3">
+        <div class="card-body">
+            {% if todos.status == False %}
+            <p>{{todos.name}}</p>
+            {% else %}
+            <h1>{{todos.name}}</h1>
+            {% endif %}
+
+            <a href="{% url 'update' todos.id %}" class="btn btn-warning">Update</a>
+            <a href="{% url 'remove' todos.id %}" class="btn btn-danger">Remove</a>
+
+
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
