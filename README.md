@@ -7,7 +7,7 @@
 ```pip install -r requirements.txt```
 
 ## Migrate
-```pythono manage.py migrate```
+```python manage.py migrate```
 
 ## Run it! 
 
